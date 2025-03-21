@@ -41,6 +41,7 @@ export default function StackedPhotos({ className }: PicturePileProps) {
       src: portraitRed,
       text: "March 25, Band Portrait",
       id: "5",
+      forceTop: 0.5,
     },
   ])
 

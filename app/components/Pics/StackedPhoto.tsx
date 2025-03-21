@@ -11,10 +11,12 @@ export interface PileImageProps {
   text?: string
   textRight?: boolean
   textTop?: boolean
+  forceTop?: number
 }
 
 export default function StackedPhoto(props: PileImageProps) {
-  const top = useState(random(0, 1))[0]
+  const topRandom = useState(random(0, 1))[0]
+  const top = props.forceTop || topRandom
   const left = useState(random(0, 1))[0]
   const [isFirstRender, setIsFirstRender] = useState(true)
 
@@ -52,7 +54,7 @@ export default function StackedPhoto(props: PileImageProps) {
     <div
       className={cn("absolute shadow-2xl select-none", {
         hidden: props.index + 1 > props.showImages,
-        "max-md:brightness-50 md:blur-sm": props.index + 1 !== props.showImages,
+        "brightness-50": props.index + 1 !== props.showImages,
       })}
       style={
         isFirstRender
