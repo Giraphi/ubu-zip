@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  <filter id="pixelateAni" x="0" y="0" width="100%" height="100%">
+    <!-- First layer: Normal pixelation effect-->
+    <feflood x="1" y="1" height="1" width="1"></feflood>
+    <fecomposite
+      id="composite"
+      in2="SourceGraphic"
+      operator="in"
+      width="2"
+      height="2"
+    ></fecomposite>
+    <fetile result="tiled"></fetile>
+    <fecomposite in="SourceGraphic" in2="tiled" operator="in"></fecomposite>
+    <femorphology
+      id="morphology"
+      operator="dilate"
+      radius="1"
+      result="dilatedPixelation"
+    ></femorphology>
+
+    <!-- Second layer: Fallback with full-width tiling-->
+    <feflood x="1" y="1" height="1" width="1" result="floodFallbackX"></feflood>
+    <fecomposite
+      id="compositeX"
+      in2="SourceGraphic"
+      operator="in"
+      width="1"
+      height="2"
+    ></fecomposite>
+    <fetile result="fullTileX"></fetile>
+    <fecomposite in="SourceGraphic" in2="fullTileX" operator="in"></fecomposite>
+    <femorphology
+      id="morphologyX"
+      operator="dilate"
+      radius="1"
+      result="dilatedFallbackX"
+    ></femorphology>
+
+    <!-- Third layer: Fallback with full-height tiling-->
+    <feflood x="1" y="1" height="1" width="1"></feflood>
+    <fecomposite
+      id="compositeY"
+      in2="SourceGraphic"
+      operator="in"
+      width="2"
+      height="1"
+    ></fecomposite>
+    <fetile result="fullTileY"></fetile>
+    <fecomposite in="SourceGraphic" in2="fullTileY" operator="in"></fecomposite>
+    <femorphology
+      id="morphologyY"
+      operator="dilate"
+      radius="1"
+      result="dilatedFallbackY"
+    ></femorphology>
+
+    <!-- Lets animate them -->
+    <animate
+      calcmode="discrete"
+      xlink:href="#composite"
+      attributename="width"
+      values="128; 64; 32; 16; 8; 4; 2"
+      dur="5s"
+      fill="freeze"
+      repeatcount="once"
+    ></animate>
+    <animate
+      calcmode="discrete"
+      xlink:href="#composite"
+      attributename="height"
+      values="128; 64; 32; 16; 8; 4; 2"
+      dur="5s"
+      fill="freeze"
+      repeatcount="once"
+    ></animate>
+    <animate
+      calcmode="discrete"
+      xlink:href="#morphology"
+      attributename="radius"
+      values="64; 32; 16; 8; 4; 2; 1"
+      dur="5s"
+      fill="freeze"
+      repeatcount="once"
+    ></animate>
+
+    <animate
+      calcmode="discrete"
+      xlink:href="#compositeX"
+      attributename="width"
+      values="64; 32; 16; 8; 4; 2; 1"
+      dur="5s"
+      fill="freeze"
+      repeatcount="once"
+    ></animate>
+    <animate
+      calcmode="discrete"
+      xlink:href="#compositeX"
+      attributename="height"
+      values="128; 64; 32; 16; 8; 4; 2"
+      dur="5s"
+      fill="freeze"
+      repeatcount="once"
+    ></animate>
+    <animate
+      calcmode="discrete"
+      xlink:href="#morphologyX"
+      attributename="radius"
+      values="64; 32; 16; 8; 4; 2; 1"
+      dur="5s"
+      fill="freeze"
+      repeatcount="once"
+    ></animate>
+
+    <animate
+      calcmode="discrete"
+      xlink:href="#compositeY"
+      attributename="width"
+      values="128; 64; 32; 16; 8; 4; 2"
+      dur="5s"
+      fill="freeze"
+      repeatcount="once"
+    ></animate>
+    <animate
+      calcmode="discrete"
+      xlink:href="#compositeY"
+      attributename="height"
+      values="64; 32; 16; 8; 4; 2; 1"
+      dur="5s"
+      fill="freeze"
+      repeatcount="once"
+    ></animate>
+    <animate
+      calcmode="discrete"
+      xlink:href="#morphologyY"
+      attributename="radius"
+      values="64; 32; 16; 8; 4; 2; 1"
+      dur="5s"
+      fill="freeze"
+      repeatcount="once"
+    ></animate>
+
+    <!-- Combine all three layers-->
+    <femerge>
+      <femergenode in="dilatedFallbackX"></femergenode>
+      <femergenode in="dilatedFallbackY"></femergenode>
+      <femergenode in="dilatedPixelation"></femergenode>
+    </femerge>
+  </filter>
+</svg>
