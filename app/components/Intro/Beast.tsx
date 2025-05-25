@@ -1,6 +1,5 @@
 "use client"
 
-import ContentCol from "@/components/ContentCol"
 import Grid from "@/components/Grid"
 import BeastSVG from "@/svg/Beast.svg"
 import { motion, useAnimation } from "motion/react"
