@@ -25,6 +25,14 @@ export default function Gigs({ className }: GigsProps) {
       <div className="col-span-full flex justify-center pb-8 md:col-span-8 md:col-start-3 md:pb-0 lg:col-span-4">
         <div className="grid grid-cols-[auto_1fr] gap-x-1.5">
           <div className="contents">
+            <span>05.09. - </span>
+            <span>Sunny Red, München</span>
+          </div>
+          <div className="contents">
+            <span>13.06. - </span>
+            <span>Glockenbachwerkstatt, München</span>
+          </div>
+          <div className="contents">
             <span>21.05. - </span>
             <span>Import Export, München</span>
           </div>
@@ -36,19 +44,19 @@ export default function Gigs({ className }: GigsProps) {
 
           <div className="contents">
             <span>04.05. - </span>
-            <span>Dublin</span>
+            <span>Bello Bar, Dublin IR</span>
           </div>
           <div className="contents">
             <span>03.05. - </span>
-            <span>Cork</span>
+            <span>Fred Zeppelin's, Cork IR</span>
           </div>
           <div className="contents">
             <span>02.05. - </span>
-            <span>Limerick</span>
+            <span>The Kasbah, Limerick IR</span>
           </div>
           <div className="contents">
             <span>01.05. - </span>
-            <span>The Deer Shead, Belfast</span>
+            <span>The Deer Shead, Belfast IR</span>
           </div>
           <div className="contents">
             <span>28.03. - </span>
