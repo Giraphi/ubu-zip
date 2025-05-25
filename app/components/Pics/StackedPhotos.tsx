@@ -16,7 +16,7 @@ export interface PicturePileProps {
 }
 
 export default function StackedPhotos({ className }: PicturePileProps) {
-  const [pileImageProps, _] = useState([
+  const [pileImageProps] = useState([
     {
       src: bandLeipzig,
       text: "09.11.24 Nochbesser leben, Leipzig",

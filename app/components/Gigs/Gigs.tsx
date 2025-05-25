@@ -1,7 +1,6 @@
 import ContentCol from "@/components/ContentCol"
 import GlitchText from "@/components/GlitchText/GlitchText"
 import Grid from "@/components/Grid"
-import { cn } from "@/lib/utils"
 import Boticelli from "@/svg/Boticelli.svg"
 import Denker from "@/svg/Denker.svg"
 
@@ -48,7 +47,7 @@ export default function Gigs({ className }: GigsProps) {
           </div>
           <div className="contents">
             <span>03.05. - </span>
-            <span>Fred Zeppelin's, Cork IR</span>
+            <span>Fred Zeppelin&apos;s, Cork IR</span>
           </div>
           <div className="contents">
             <span>02.05. - </span>
