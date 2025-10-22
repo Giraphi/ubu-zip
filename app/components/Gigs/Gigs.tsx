@@ -24,6 +24,10 @@ export default function Gigs({ className }: GigsProps) {
       <div className="col-span-full flex justify-center pb-8 md:col-span-8 md:col-start-3 md:pb-0 lg:col-span-4">
         <div className="grid grid-cols-[auto_1fr] gap-x-1.5">
           <div className="contents">
+            <span>01.11. - </span>
+            <span>Loge., Berlin</span>
+          </div>
+          <div className="contents">
             <span>05.09. - </span>
             <span>Sunny Red, München</span>
           </div>
