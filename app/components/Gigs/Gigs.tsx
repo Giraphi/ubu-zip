@@ -25,7 +25,7 @@ export default function Gigs({ className }: GigsProps) {
         <div className="grid grid-cols-[auto_1fr] gap-x-1.5">
           <div className="contents">
             <span>01.11. - </span>
-            <span>Loge., Berlin</span>
+            <span>Loge. Berlin</span>
           </div>
           <div className="contents">
             <span>05.09. - </span>
