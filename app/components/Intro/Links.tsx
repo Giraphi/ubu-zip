@@ -4,8 +4,11 @@ import Link from "next/link"
 export default function Links() {
   return (
     <div className="font-fraktur mt-4 flex w-full flex-col items-center gap-8 text-3xl lg:gap-16">
-      <Link href="mailto:ubu.zip@gmail.com hover:text-[yellow] max-lg:rotate-8">
-        ubu.zip@gmail.com
+      <Link
+        href="mailto:ubu.zip@gmail.com"
+        className="mt-3 -rotate-6 hover:text-[yellow] lg:rotate-6"
+      >
+        ubu.zip.band@gmail.com
       </Link>
 
       <div className="text-md flex w-full flex-col items-center gap-8 md:flex-row md:justify-between md:gap-4">
