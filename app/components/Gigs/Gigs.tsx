@@ -29,7 +29,7 @@ export default function Gigs({ className }: GigsProps) {
           </div>
           <div className="contents">
             <span>26.09.26 - </span>
-            <span>Zeughaus, Passau. Mit Misss Mellow</span>
+            <span>Zeughaus, Passau. Mit Miss Mellow</span>
           </div>
           <div className="contents">
             <span>16.06.26 - </span>
@@ -53,7 +53,7 @@ export default function Gigs({ className }: GigsProps) {
           </div>
 
           <details className="col-span-2 mt-4">
-            <summary className="cursor-pointer">2025</summary>
+            <summary className="cursor-pointer text-xl">2025</summary>
             <div className="mt-1.5 grid grid-cols-[auto_1fr] gap-x-1.5">
               <div className="contents">
                 <span>19.12.25 - </span>

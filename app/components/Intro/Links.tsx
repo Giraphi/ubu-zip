@@ -3,8 +3,12 @@ import Link from "next/link"
 
 export default function Links() {
   return (
-    <>
-      <div className="text-md font-fraktur flex w-full flex-col items-center gap-8 text-3xl md:flex-row md:justify-between md:gap-4">
+    <div className="font-fraktur mt-4 flex w-full flex-col items-center gap-8 text-3xl lg:gap-16">
+      <Link href="mailto:ubu.zip@gmail.com hover:text-[yellow] max-lg:rotate-8">
+        ubu.zip@gmail.com
+      </Link>
+
+      <div className="text-md flex w-full flex-col items-center gap-8 md:flex-row md:justify-between md:gap-4">
         <Link
           href="https://www.instagram.com/ubu.zip/"
           className="flex origin-center rotate-8 items-center gap-2 hover:text-[yellow] md:rotate-12"
@@ -35,6 +39,6 @@ export default function Links() {
           </span>
         </Link>
       </div>
-    </>
+    </div>
   )
 }
