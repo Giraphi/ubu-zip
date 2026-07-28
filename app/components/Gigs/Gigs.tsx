@@ -24,12 +24,32 @@ export default function Gigs({ className }: GigsProps) {
       <div className="col-span-full flex justify-center pb-8 md:col-span-8 md:col-start-3 md:pb-0 lg:col-span-4">
         <div className="grid grid-cols-[auto_1fr] gap-x-1.5">
           <div className="contents">
+            <span>22.05.27 - </span>
+            <span>Eastfilly Festival, Ostfildern bei Stuttgart</span>
+          </div>
+          <div className="contents">
+            <span>06.02.27 - </span>
+            <span>Altes Spital, Viechtach</span>
+          </div>
+          <div className="contents">
+            <span>08.01.27 - </span>
+            <span>Glockenbachwerkstatt, München</span>
+          </div>
+          <div className="contents">
+            <span>21.11.26 - </span>
+            <span>Treppenbar, München</span>
+          </div>
+          <div className="contents">
             <span>02.10.26 - </span>
             <span>Rhiz, Wien</span>
           </div>
           <div className="contents">
             <span>26.09.26 - </span>
             <span>Zeughaus, Passau. Mit Miss Mellow</span>
+          </div>
+          <div className="contents">
+            <span>12.07.26 - </span>
+            <span>El Ritual Festival, Bayerischer Wald</span>
           </div>
           <div className="contents">
             <span>16.06.26 - </span>
